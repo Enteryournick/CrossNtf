@@ -29,8 +29,8 @@ namespace CrossNtf.Views
                     case (int)MenuItemType.Browse:
                         MenuPages.Add(id, new NavigationPage(new ItemsPage()));
                         break;
-                    case (int)MenuItemType.Notifications:
-                        MenuPages.Add(id, new NavigationPage(new NotificationsPage()));
+                    case (int)MenuItemType.Crafting:
+                        MenuPages.Add(id, new NavigationPage(new CraftingPage()));
                         break;
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
@@ -40,7 +40,7 @@ namespace CrossNtf.Views
 
             var newPage = MenuPages[id];
 
-            if (newPage != null && Detail != newPage)
+            if (newPage != null)
             {
                 Detail = newPage;
 

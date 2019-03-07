@@ -31,7 +31,7 @@ namespace CrossNtf.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            await Navigation.PushModalAsync(new NavigationPage(new ItemDetailPage(new ItemDetailViewModel(item))));
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;
@@ -48,6 +48,10 @@ namespace CrossNtf.Views
 
             if (viewModel.Items.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
+
+            if (viewModel.Wservice.LastUpdateTime == null)
+                viewModel.GetCrossDbLastUpdateTimeCommand.Execute(null);
+
         }
     }
 }

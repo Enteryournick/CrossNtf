@@ -14,7 +14,10 @@ namespace CrossNtf.ViewModels
     {
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
 
+        public TranslateExtension Translater = new TranslateExtension();
+
         bool isBusy = false;
+        
         public bool IsBusy
         {
             get { return isBusy; }

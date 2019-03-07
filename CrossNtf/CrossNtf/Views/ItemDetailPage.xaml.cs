@@ -13,25 +13,42 @@ namespace CrossNtf.Views
     {
         ItemDetailViewModel viewModel;
 
+        public Item Item { get; set; }
         public ItemDetailPage(ItemDetailViewModel viewModel)
         {
             InitializeComponent();
-
             BindingContext = this.viewModel = viewModel;
         }
 
-        public ItemDetailPage()
+        /*public NewItemSavePage()
         {
             InitializeComponent();
 
-            var item = new Item
+            var item = new CrossDbItemTypes
             {
-                Text = "Item 1",
-                Description = "This is an item description."
+                Id = "Item 1",
+                Name = "This is an item description."
             };
 
-            viewModel = new ItemDetailViewModel(item);
+            viewModel = new NewItemSaveViewModel(item);
             BindingContext = viewModel;
+        }*/
+
+        async void Save_Clicked(object sender, EventArgs e)
+        {
+            MessagingCenter.Send(this, "UpdateItem", viewModel.Item);
+            await Navigation.PopModalAsync();
+        }
+
+        async void Cancel_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
+
+        async void Delete_Clicked(object sender, EventArgs e)
+        {
+            MessagingCenter.Send(this, "DeleteItem", viewModel.Item);
+            await Navigation.PopModalAsync();
         }
     }
 }

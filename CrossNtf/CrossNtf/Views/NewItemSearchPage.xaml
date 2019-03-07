@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossNtf.Views.NewItemSearchPage"
+             Title="{Binding Title}"
+             IsBusy="{Binding IsSearchPageRefreshing, Mode=OneWay}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="cancel.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout x:Name="itemsLayer" IsVisible="True">
+                <ListView x:Name="DbItemsListView"
+                ItemsSource="{Binding Items}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                CachingStrategy="RecycleElement"
+                ItemSelected="OnItemSelected"
+                IsRefreshing="{Binding IsSearchPageRefreshing, Mode=OneWay}"
+                Margin="10">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <!-- <ImageCell ImageSource="{Binding Image}" Text="{Binding Name}" Detail="{Binding TypeName}"></ImageCell>-->
+                            <ViewCell>
+                            <Grid Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40" />
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding Image}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
+                                    <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                                    <Label Text="{Binding TypeName}" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center"/>
+                                    <Label Text="Sell:" Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding FormatSellPrice}" Grid.Row="0" Grid.Column="3" VerticalTextAlignment="Center" />
+                                    <Label Text="Buy:" Grid.Row="1" Grid.Column="2" VerticalTextAlignment="Center" />
+                                    <Label Text="{Binding FormatBuyPrice}" Grid.Row="1" Grid.Column="3" VerticalTextAlignment="Center" />
+                            </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

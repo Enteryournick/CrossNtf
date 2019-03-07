@@ -9,9 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossNtf.iOS", "CrossNtf\Cr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossNtf.UWP", "CrossNtf\CrossNtf.UWP\CrossNtf.UWP.csproj", "{622A3F4E-FECA-4C70-8AEB-FDDB46F25A7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossNtf.MobileAppService", "CrossNtf\CrossNtf.MobileAppService\CrossNtf.MobileAppService.csproj", "{65E73159-FC49-4511-A76C-416B786F833B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossNtf", "CrossNtf\CrossNtf\CrossNtf.csproj", "{B05DEF0F-6552-4E99-81A5-27969FBDEC3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossNtf", "CrossNtf\CrossNtf\CrossNtf.csproj", "{B05DEF0F-6552-4E99-81A5-27969FBDEC3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -137,42 +135,6 @@ Global
 		{622A3F4E-FECA-4C70-8AEB-FDDB46F25A7D}.Release|x86.ActiveCfg = Release|x86
 		{622A3F4E-FECA-4C70-8AEB-FDDB46F25A7D}.Release|x86.Build.0 = Release|x86
 		{622A3F4E-FECA-4C70-8AEB-FDDB46F25A7D}.Release|x86.Deploy.0 = Release|x86
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|ARM.Build.0 = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|ARM.Deploy.0 = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|iPhone.Deploy.0 = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|iPhoneSimulator.Deploy.0 = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|x64.Build.0 = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|x64.Deploy.0 = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|x86.Build.0 = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Debug|x86.Deploy.0 = Debug|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|ARM.ActiveCfg = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|ARM.Build.0 = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|ARM.Deploy.0 = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|iPhone.Build.0 = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|iPhone.Deploy.0 = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|x64.ActiveCfg = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|x64.Build.0 = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|x64.Deploy.0 = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|x86.ActiveCfg = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|x86.Build.0 = Release|Any CPU
-		{65E73159-FC49-4511-A76C-416B786F833B}.Release|x86.Deploy.0 = Release|Any CPU
 		{B05DEF0F-6552-4E99-81A5-27969FBDEC3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B05DEF0F-6552-4E99-81A5-27969FBDEC3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B05DEF0F-6552-4E99-81A5-27969FBDEC3D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU

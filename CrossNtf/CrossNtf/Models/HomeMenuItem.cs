@@ -7,7 +7,7 @@ namespace CrossNtf.Models
     public enum MenuItemType
     {
         Browse,
-        Notifications,
+        Crafting,
         About
     }
     public class HomeMenuItem

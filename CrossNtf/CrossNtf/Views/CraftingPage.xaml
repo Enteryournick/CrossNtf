@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossNtf.Views.CraftingPage"
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Search" Clicked="Search_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="search.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <StackLayout Spacing="20" Padding="15" x:Name="searchLayer" IsVisible="True">
+                <Picker Title="{Binding ChooseFaction}" x:Name="fPicker" ItemsSource="{Binding Factions}"  ItemDisplayBinding="{Binding Name}" IsEnabled="{Binding IsFactionsEnabled}" SelectedIndex="{Binding FactionsSelectedIndex}"></Picker>
+                <!--<Picker Title="{Binding ChooseCategory}" x:Name="cPicker" ItemsSource="{Binding Categories}"  ItemDisplayBinding="{Binding Name}" IsEnabled="{Binding IsCategoriesEnabled}"></Picker>
+                 <Picker Title="{Binding ChooseType}" x:Name="tPicker" ItemsSource="{Binding Types}"  ItemDisplayBinding="{Binding Name}" IsEnabled="{Binding IsTypesEnabled}"></Picker> -->
+                <Picker x:Name="rPicker" Title="{Binding ChooseRarity}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Common</x:String>
+                            <x:String>Rare</x:String>
+                            <x:String>Epic</x:String>
+                            <x:String>Legendary</x:String>
+                            <x:String>Relic</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <!--<Label Text="Name"/>
+                <Entry Text="" FontSize="Small" x:Name="searchQuery"/>-->
+                
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

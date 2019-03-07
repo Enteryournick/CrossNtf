@@ -19,13 +19,13 @@ namespace CrossNtf.Views
             menuItems = new List<HomeMenuItem>
             {
                 new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
-                new HomeMenuItem {Id = MenuItemType.Notifications, Title="Notifications" },
+                new HomeMenuItem {Id = MenuItemType.Crafting, Title="Crafting" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" }
             };
 
             ListViewMenu.ItemsSource = menuItems;
 
-            ListViewMenu.SelectedItem = menuItems[0];
+           // ListViewMenu.SelectedItem = menuItems[0];
             ListViewMenu.ItemSelected += async (sender, e) =>
             {
                 if (e.SelectedItem == null)
@@ -33,6 +33,7 @@ namespace CrossNtf.Views
 
                 var id = (int)((HomeMenuItem)e.SelectedItem).Id;
                 await RootPage.NavigateFromMenu(id);
+                ListViewMenu.SelectedItem = null;
             };
         }
     }
